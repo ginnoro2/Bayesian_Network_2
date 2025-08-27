@@ -26,7 +26,8 @@ task1/
 │   ├── malware_analysis.py              # Main ML algorithms
 │   └── comparison_visualizations.py     # Results comparison
 ├── data/
-│   └── malimg_paper_dataset_imgs/    # 25 malware families (1,250 images)
+│   └── data.txt                        # download link provided
+                                            # malimg_paper_dataset_imgs with 25 malware families (1,250 images)
 ├── results/                            # Model outputs & metrics
 ├── visualizations/                     # Generated plots & comparisons
 ├── requirements.txt                    # Python dependencies
