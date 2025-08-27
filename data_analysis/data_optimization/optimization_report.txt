@@ -1,0 +1,53 @@
+
+============================================================
+MALWARE DATASET - DATA OPTIMIZATION REPORT
+============================================================
+
+1. OPTIMIZATION PIPELINE
+------------------------
+1. Outlier Handling: IQR method
+2. Feature Scaling: StandardScaler
+3. Feature Selection: Mutual Information (top 15 features)
+4. Dimensionality Reduction: PCA (10 components)
+5. Data Balancing: SMOTE
+
+2. DATASET TRANSFORMATIONS
+--------------------------
+Original Shape: (1250, 31)
+Cleaned Shape: (1250, 31)
+Scaled Shape: (1250, 31)
+Selected Features Shape: (1250, 16)
+Reduced Dimensions Shape: (1250, 11)
+Final Optimized Shape: (1250, 11)
+
+3. FEATURE SELECTION RESULTS
+----------------------------
+Selected Features: ['mean_intensity', 'std_intensity', 'median_intensity', 'q25_intensity', 'q75_intensity', 'texture_contrast', 'texture_correlation', 'texture_homogeneity', 'lbp_hist_1', 'haralick_2', 'haralick_3', 'haralick_4', 'haralick_6', 'haralick_7', 'haralick_8']
+
+4. DIMENSIONALITY REDUCTION RESULTS
+-----------------------------------
+PCA Components: 10
+Explained Variance: 1.0000
+
+5. DATA BALANCING RESULTS
+-------------------------
+Original Class Distribution:
+{'Swizzor.gen!I': 50, 'VB.AT': 50, 'Allaple.L': 50, 'Wintrim.BX': 50, 'Lolyda.AA3': 50, 'Lolyda.AA2': 50, 'Obfuscator.AD': 50, 'Skintrim.N': 50, 'Agent.FYI': 50, 'Swizzor.gen!E': 50, 'Malex.gen!J': 50, 'Yuner.A': 50, 'Allaple.A': 50, 'Instantaccess': 50, 'Rbot!gen': 50, 'Fakerean': 50, 'Adialer.C': 50, 'Lolyda.AT': 50, 'Lolyda.AA1': 50, 'C2LOP.P': 50, 'C2LOP.gen!g': 50, 'Dontovo.A': 50, 'Autorun.K': 50, 'Dialplatform.B': 50, 'Alueron.gen!J': 50}
+
+Balanced Class Distribution:
+{'Swizzor.gen!I': 50, 'VB.AT': 50, 'Allaple.L': 50, 'Wintrim.BX': 50, 'Lolyda.AA3': 50, 'Lolyda.AA2': 50, 'Obfuscator.AD': 50, 'Skintrim.N': 50, 'Agent.FYI': 50, 'Swizzor.gen!E': 50, 'Malex.gen!J': 50, 'Yuner.A': 50, 'Allaple.A': 50, 'Instantaccess': 50, 'Rbot!gen': 50, 'Fakerean': 50, 'Adialer.C': 50, 'Lolyda.AT': 50, 'Lolyda.AA1': 50, 'C2LOP.P': 50, 'C2LOP.gen!g': 50, 'Dontovo.A': 50, 'Autorun.K': 50, 'Dialplatform.B': 50, 'Alueron.gen!J': 50}
+
+6. OPTIMIZATION BENEFITS
+------------------------
+- Reduced feature dimensionality from 30 to 15
+- Eliminated outliers using IQR method
+- Standardized feature scales
+- Balanced class distribution
+- Preserved 95%+ variance with PCA
+
+7. RECOMMENDATIONS FOR ML MODELS
+--------------------------------
+- Use final_optimized_data.csv for training
+- Apply saved scaler.pkl for new data scaling
+- Use saved pca.pkl for dimensionality reduction
+- Consider feature importance for interpretability

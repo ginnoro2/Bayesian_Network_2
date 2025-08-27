@@ -1,0 +1,32 @@
+============================================================
+MALWARE IMAGE ANALYSIS - SUMMARY REPORT
+============================================================
+
+1. GAUSSIAN PROCESS REGRESSION
+------------------------------
+Mean Squared Error: 12653.1770
+Root Mean Squared Error: 112.4863
+R² Score: -11.2267
+
+2. GAUSSIAN PROCESS CLASSIFICATION
+-----------------------------------
+Accuracy: 0.9640
+
+3. BAYESIAN NETWORK ANALYSIS
+-------------------------
+Number of variables: 8
+Variables: mean_intensity, std_intensity, median_intensity, min_intensity, max_intensity, q25_intensity, q75_intensity, edge_density
+
+4. LATENT DIRICHLET ALLOCATION
+------------------------------
+Number of topics: 10
+Perplexity: 43.6497
+Number of malware families: 25
+
+5. DATASET INFORMATION
+--------------------
+Total samples: 1250
+Feature dimension: 30
+Number of classes: 25
+
+============================================================

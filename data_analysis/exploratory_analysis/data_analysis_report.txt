@@ -1,0 +1,86 @@
+
+============================================================
+MALWARE DATASET - EXPLORATORY DATA ANALYSIS REPORT
+============================================================
+
+1. DATASET OVERVIEW
+-------------------
+Total Samples: 1250
+Total Features: 30
+Number of Classes: 25
+Dataset Shape: (1250, 31)
+
+2. MALWARE FAMILY DISTRIBUTION
+------------------------------
+Swizzor.gen!I: 50 samples
+Instantaccess: 50 samples
+Dialplatform.B: 50 samples
+Autorun.K: 50 samples
+Dontovo.A: 50 samples
+C2LOP.gen!g: 50 samples
+C2LOP.P: 50 samples
+Lolyda.AA1: 50 samples
+Lolyda.AT: 50 samples
+Adialer.C: 50 samples
+Fakerean: 50 samples
+Rbot!gen: 50 samples
+Allaple.A: 50 samples
+VB.AT: 50 samples
+Yuner.A: 50 samples
+Malex.gen!J: 50 samples
+Swizzor.gen!E: 50 samples
+Agent.FYI: 50 samples
+Skintrim.N: 50 samples
+Obfuscator.AD: 50 samples
+Lolyda.AA2: 50 samples
+Lolyda.AA3: 50 samples
+Wintrim.BX: 50 samples
+Allaple.L: 50 samples
+Alueron.gen!J: 50 samples
+
+3. FEATURE IMPORTANCE ANALYSIS
+-----------------------------
+Top 5 Features by Variance:
+1. haralick_7: 1185892.7253
+2. haralick_4: 1185892.7253
+3. haralick_2: 1185892.7253
+4. lbp_hist_1: 295765.6596
+5. lbp_hist_10: 40409.1641
+
+Top 5 Features by Correlation:
+1. haralick_3: 0.2763
+2. texture_correlation: 0.2763
+3. max_intensity: 0.2245
+4. haralick_5: 0.1672
+5. texture_energy: 0.1621
+
+Top 5 Features by Mutual Information:
+1. haralick_6: 2.2615
+2. texture_homogeneity: 2.2615
+3. mean_intensity: 2.2614
+4. std_intensity: 2.1807
+5. texture_contrast: 2.1807
+
+4. DATA QUALITY ASSESSMENT
+-------------------------
+Missing Values: 0
+Duplicate Rows: 258
+Constant Features: 1
+Features with Outliers: 29
+
+5. RECOMMENDATIONS FOR DATA OPTIMIZATION
+---------------------------------------
+- Feature Selection: Consider using top features based on combined importance score
+- Outlier Handling: 29 features have outliers
+- Data Balancing: Family distribution shows some imbalance
+- Feature Scaling: Features have different scales, normalization recommended
+
+6. CORRELATION ANALYSIS
+----------------------
+Strong Correlations (>0.7):
+- mean_intensity <-> median_intensity: 0.985
+- mean_intensity <-> q25_intensity: 0.952
+- mean_intensity <-> q75_intensity: 0.923
+- median_intensity <-> q25_intensity: 0.932
+- median_intensity <-> q75_intensity: 0.908
+- q25_intensity <-> q75_intensity: 0.780

@@ -1,0 +1,7 @@
+Stage,Samples,Features,Classes
+Original,1250,30,25
+Cleaned,1250,30,25
+Scaled,1250,30,25
+Selected,1250,15,25
+Reduced,1250,10,25
+Balanced,1250,10,25
